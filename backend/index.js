@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import http from "http";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -19,6 +20,8 @@ dotenv.config();
 configurePassport();
 const app = express();
 const httpServer = http.createServer(app);
+const __dirname = path.resolve();
+const port = process.env.PORT || 4000;
 
 const MongoDBStore = connectMongo(session);
 const store = new MongoDBStore({
@@ -65,9 +68,12 @@ app.use(
   })
 );
 
+app.use(express.static(path.join(__dirname, "frontend/dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend/dist", "index.html"));
+});
+
 // Modified server startup
-await new Promise((resolve) =>
-  httpServer.listen({ port: process.env.PORT }, resolve)
-);
+await new Promise((resolve) => httpServer.listen({ port: port }, resolve));
 await connectDB();
-console.log(`🚀 Server ready at http://localhost:${process.env.PORT}/graphql`);
+console.log(`🚀 Server ready at http://localhost:${port}/graphql`);
