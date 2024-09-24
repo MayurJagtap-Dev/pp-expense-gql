@@ -1,7 +1,7 @@
 import cron from "cron";
 import https from "https";
 
-const URL = "Paste_here_the_link_of_deployed_server";
+const URL = "https://localhost:4000/graphql";
 
 const job = new cron.CronJob("*/14 * * * *", function () {
   https

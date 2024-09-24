@@ -2,7 +2,7 @@
 
 Welcome to the MERN GraphQL Expense Tracker App! This project is designed to help you manage your expenses efficiently using a modern tech stack and GraphQL.
 
-<img align="center" height="350" width="450" alt="" src="https://raw.githubusercontent.com/MayurJagtap-Dev/pp-expense-tracker-gql/master/expense-tracker-ui.png" />
+https://raw.githubusercontent.com/iam-mayur/pp-expense-tracker-gql/master/assets/expense-tracker.mp4
 
 ## Features:
 
@@ -16,12 +16,21 @@ Welcome to the MERN GraphQL Expense Tracker App! This project is designed to hel
 - 👾 Cron jobs for scheduled tasks and automation
 - ⏳ And much more!
 
+<div align="center"><img height="350" width="700" alt="" src="https://raw.githubusercontent.com/iam-mayur/pp-expense-tracker-gql/master/assets/expense-tracker-ui.png" /></div>
+
 ## Setup .env file
 
 ```js
 MONGO_URI=...
 SESSION_SECRET=...
 PORT=...
+```
+
+## Install dependencies
+
+```sh
+cd frontend && npm i
+cd .. && npm i
 ```
 
 ## Build the app
