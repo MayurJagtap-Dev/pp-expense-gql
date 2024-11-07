@@ -2,7 +2,7 @@
 
 Welcome to the MERN GraphQL Expense Tracker App! This project is designed to help you manage your expenses efficiently using a modern tech stack and GraphQL.
 
-https://raw.githubusercontent.com/iam-mayur/pp-expense-tracker-gql/master/assets/expense-tracker.mp4
+https://github.com/user-attachments/assets/a140c61d-9927-4912-9f7d-2b6543d0019f
 
 ## Features:
 
